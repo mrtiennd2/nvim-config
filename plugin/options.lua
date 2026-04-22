@@ -40,7 +40,7 @@ o.shortmess:append("c")
 o.signcolumn = "yes"
 o.scrolloff = 8
 
-o.colorcolumn = "80"
+o.colorcolumn = "81"
 o.textwidth = 80 -- see :help gq
 
 o.path:append("**") -- see :help starstar
