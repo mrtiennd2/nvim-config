@@ -1,3 +1,9 @@
+vim.pack.add({
+    "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+})
+
 -- see :h vim.lsp.config
 vim.lsp.config("ts_ls", {
     root_markers = {

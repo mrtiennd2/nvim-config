@@ -14,6 +14,10 @@ vim.keymap.set("n", "<leader>gp", function()
             return
         end
 
+        if not inp:match("^%x+$") then
+            return
+        end
+
         local rev = vim.trim(inp)
         if rev == "" then
             rev = "HEAD^"

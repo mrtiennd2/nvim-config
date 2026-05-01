@@ -1,17 +1,12 @@
 vim.g.mapleader = " "
 
-vim.pack.add({
-    "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/mason-org/mason.nvim",
-    "https://github.com/mason-org/mason-lspconfig.nvim",
-})
-
--- require("dtien.git")
+require("vim._core.ui2").enable({})
 require("dtien.lsp")
 require("dtien.snippets")
 require("dtien.treesitter")
-
-require("vim._core.ui2").enable({})
+require("dtien.diffview")
+require("dtien.windsurf")
+require("dtien.fugitive")
 
 vim.cmd([[packadd nvim.undotree]])
 vim.keymap.set("n", "<leader>u", function()
@@ -19,16 +14,3 @@ vim.keymap.set("n", "<leader>u", function()
 end)
 
 vim.cmd("colorscheme one")
-
--- vim.cmd("colorscheme retrobox")
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none", fg = "#ebdbb2" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
--- vim.api.nvim_set_hl(0, "Identifier", { fg = "#ebdbb2" })
--- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
--- vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#504945" })
--- vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "#303030" })
--- vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
-
-require("dtien.diffview")
-require("dtien.windsurf")
-require("dtien.fugitive")
